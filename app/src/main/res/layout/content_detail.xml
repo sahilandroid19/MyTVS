@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:orientation="vertical"
+        tools:context=".ui.TryActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/person_cardview"
+            android:layout_marginStart="@dimen/half_fab"
+            android:layout_marginTop="@dimen/half_fab"
+            android:layout_marginEnd="@dimen/half_fab"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="12dp"
+                android:paddingTop="@dimen/half_fab">
+
+                <TextView
+                    android:id="@+id/p_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/half_fab"
+                    android:layout_marginEnd="@dimen/half_fab"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="italic|bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/p_occupation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/half_fab"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="@dimen/half_fab"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/darker_gray"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/p_name" />
+
+                <TextView
+                    android:id="@+id/loc_const"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/half_fab"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:layout_marginEnd="@dimen/half_fab"
+                    android:text="@string/loc_const"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/p_occupation" />
+
+                <TextView
+                    android:id="@+id/p_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/loc_const"
+                    app:layout_constraintStart_toEndOf="@+id/loc_const" />
+
+                <TextView
+                    android:id="@+id/sal_const"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/sal_const"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="@+id/loc_const"
+                    app:layout_constraintTop_toBottomOf="@+id/loc_const" />
+
+                <TextView
+                    android:id="@+id/p_sal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/sal_const"
+                    app:layout_constraintStart_toStartOf="@+id/p_city" />
+
+                <TextView
+                    android:id="@+id/date_const"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/date_const"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="@+id/sal_const"
+                    app:layout_constraintTop_toBottomOf="@+id/sal_const" />
+
+                <TextView
+                    android:id="@+id/p_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/date_const"
+                    app:layout_constraintStart_toStartOf="@+id/p_sal" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pic_cardview"
+            android:layout_marginStart="@dimen/half_fab"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/half_fab"
+            android:padding="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="12dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/time_const"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/half_fab"
+                    android:layout_marginTop="@dimen/half_fab"
+                    android:layout_marginEnd="@dimen/half_fab"
+                    android:text="@string/time_const"
+                    android:textColor="@android:color/black"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/pic_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/darker_gray"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/time_const"
+                    app:layout_constraintStart_toEndOf="@+id/time_const" />
+
+                <ImageView
+                    android:id="@+id/camera_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fab_margin"
+                    android:layout_marginEnd="@dimen/fab_margin"
+                    android:tint="@color/colorPrimary"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/camera" />
+
+                <ImageView
+                    android:id="@+id/click_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/max_card"
+                    android:maxHeight="@dimen/max_card"
+                    android:layout_marginStart="@dimen/half_fab"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:layout_marginEnd="@dimen/half_fab"
+                    android:layout_marginBottom="@dimen/fab_margin"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintBottom_toTopOf="@+id/camera_pic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/time_const"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

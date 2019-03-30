@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">My TVS</string>
+    <string name="title_activity_list">User Lists</string>
+    <string name="action_search">Search</string>
+    <string name="search_hint">Type name…</string>
+    <string name="title_activity_try">TryActivity</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="loc_const">Location:</string>
+    <string name="sal_const">Salary:</string>
+    <string name="date_const">Joining Date:</string>
+    <string name="time_const">TimeStamp:</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="detail_toolbar_title">User Details</string>
+    <string name="list_toolbar_title">User Lists</string>
+    <string name="my_tvs">my tvs</string>
+    <string name="username_hint">UserName</string>
+    <string name="password_hint">Password</string>
+    <string name="btn_login">Login</string>
+</resources>
